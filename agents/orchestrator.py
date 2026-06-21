@@ -215,18 +215,25 @@ class Orchestrator:
             self.log_agent_action("Re-plan Agent", f"LỖI: {str(e)}")
 
         # 5. Run Translate Agent (Last step)
-        self.log_agent_action("Orchestrator", f"Kích hoạt Translate Agent dịch sang ngôn ngữ: {language}...")
-        translate_agent = TranslateAgent(self.gemini_key)
-        try:
-            translate_agent.run(self.state)
-            self.log_agent_action("Translate Agent", "Hoàn thành dịch thuật toàn bộ kế hoạch chuyến đi.")
-        except Exception as e:
-            self.log_agent_action("Translate Agent", f"LỖI: {str(e)}")
+        if language != "Tiếng Việt":
+            self.log_agent_action("Orchestrator", f"Kích hoạt Translate Agent dịch sang ngôn ngữ: {language}...")
+            translate_agent = TranslateAgent(self.gemini_key)
+            try:
+                translate_agent.run(self.state)
+                self.log_agent_action("Translate Agent", "Hoàn thành dịch thuật toàn bộ kế hoạch chuyến đi.")
+            except Exception as e:
+                self.log_agent_action("Translate Agent", f"LỖI: {str(e)}")
+                self.state["final_translated"] = {
+                    "translated_itinerary": "Translation failed. Original content used.",
+                    "useful_phrases": []
+                }
+                self.log_agent_action("Translate Agent", "Kích hoạt fallback: Sử dụng bản gốc tiếng Việt.")
+        else:
+            self.log_agent_action("Orchestrator", "Bỏ qua Translate Agent do ngôn ngữ là Tiếng Việt (Tối ưu tốc độ).")
             self.state["final_translated"] = {
-                "translated_itinerary": "Translation failed. Original content used.",
+                "translated_itinerary": "Đã sử dụng bản gốc tiếng Việt.",
                 "useful_phrases": []
             }
-            self.log_agent_action("Translate Agent", "Kích hoạt fallback: Sử dụng bản gốc tiếng Việt.")
 
         self.log_agent_action("Orchestrator", "Toàn bộ luồng Multi-agent kết thúc thành công!")
 
