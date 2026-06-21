@@ -1,0 +1,258 @@
+{
+  "user_request": {
+    "destination": "Quy Nhơn",
+    "days": 4,
+    "budget_per_day": 5000000,
+    "language": "Tiếng Việt",
+    "has_kids": false,
+    "preferences": "Mê hải sản, thích trải nghiệm đồ ăn địa phương",
+    "weather_sim_mode": "Nắng đẹp"
+  },
+  "itinerary": [
+    {
+      "day": 1,
+      "session": "Sáng",
+      "places": [
+        {
+          "name": "Kỳ Co",
+          "coordinate": {
+            "lat": 13.9248,
+            "lon": 109.2872
+          },
+          "avg_duration": "3h",
+          "description": "Được mệnh danh là Maldives của Việt Nam, bãi tắm Kỳ Co có nước trong vắt và cát trắng tuyệt đẹp. Tuyệt vời cho những bức hình check-in.",
+          "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/K%E1%BB%B3_Co%2C_Quy_Nh%C6%A1n.jpg"
+        }
+      ]
+    },
+    {
+      "day": 1,
+      "session": "Chiều",
+      "places": [
+        {
+          "name": "Eo Gió",
+          "coordinate": {
+            "lat": 13.9525,
+            "lon": 109.2785
+          },
+          "avg_duration": "2h",
+          "description": "Đón gió biển mát rượi và ngắm cảnh hoàng hôn buông xuống qua những dãy núi đá kỳ vĩ."
+        }
+      ]
+    },
+    {
+      "day": 1,
+      "session": "Tối",
+      "places": [
+        {
+          "name": "Quảng trường Nguyễn Tất Thành",
+          "coordinate": {
+            "lat": 13.7712,
+            "lon": 109.2315
+          },
+          "avg_duration": "2h",
+          "description": "Đi dạo ngắm cảnh thành phố về đêm và thưởng thức hải sản ven biển."
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "session": "Sáng",
+      "places": [
+        {
+          "name": "Khu dã ngoại Trung Lương",
+          "coordinate": {
+            "lat": 13.9742,
+            "lon": 109.1554
+          },
+          "avg_duration": "3h",
+          "description": "Cắm trại, chụp ảnh với phong cảnh biển hoang sơ và yên bình."
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "session": "Chiều",
+      "places": [
+        {
+          "name": "Chùa Ông Núi",
+          "coordinate": {
+            "lat": 13.9856,
+            "lon": 109.1124
+          },
+          "avg_duration": "1.5h",
+          "description": "Chiêm bái tượng Phật ngồi lớn nhất Đông Nam Á và ngắm toàn cảnh đầm Thị Nại."
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "session": "Tối",
+      "places": [
+        {
+          "name": "Khu phố ẩm thực Phan Bội Châu",
+          "coordinate": {
+            "lat": 13.7788,
+            "lon": 109.2291
+          },
+          "avg_duration": "2h",
+          "description": "Thiên đường ăn vặt Quy Nhơn với bánh xèo tôm nhảy, bánh khọt, chè nhớ."
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "session": "Sáng",
+      "places": [
+        {
+          "name": "Bãi Xếp",
+          "coordinate": {
+            "lat": 13.6845,
+            "lon": 109.2248
+          },
+          "avg_duration": "3h",
+          "description": "Khám phá làng chài thanh bình và thư giãn tại bãi biển êm đềm."
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "session": "Chiều",
+      "places": [
+        {
+          "name": "Tháp Đôi",
+          "coordinate": {
+            "lat": 13.7852,
+            "lon": 109.2155
+          },
+          "avg_duration": "1.5h",
+          "description": "Tìm hiểu văn hóa Chăm Pa qua di tích tháp cổ 800 năm tuổi."
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "session": "Tối",
+      "places": [
+        {
+          "name": "Chợ đêm Quy Nhơn",
+          "coordinate": {
+            "lat": 13.7745,
+            "lon": 109.2273
+          },
+          "avg_duration": "2h",
+          "description": "Mua sắm đồ lưu niệm và ăn vặt các món địa phương."
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "session": "Sáng",
+      "places": [
+        {
+          "name": "Đảo Hòn Khô",
+          "coordinate": {
+            "lat": 13.7663,
+            "lon": 109.2941
+          },
+          "avg_duration": "3h",
+          "description": "Lặn ngắm san hô và trải nghiệm con đường xuyên biển độc đáo."
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "session": "Chiều",
+      "places": [
+        {
+          "name": "Bảo tàng Bình Định",
+          "coordinate": {
+            "lat": 13.7758,
+            "lon": 109.2312
+          },
+          "avg_duration": "1h",
+          "description": "Tìm hiểu lịch sử và văn hóa đặc sắc của mảnh đất võ thuật."
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "session": "Tối",
+      "places": [
+        {
+          "name": "Sân bay Phù Cát",
+          "coordinate": {
+            "lat": 13.9555,
+            "lon": 109.0435
+          },
+          "avg_duration": "1h",
+          "description": "Chuẩn bị hành lý và lên máy bay trở về."
+        }
+      ]
+    }
+  ],
+  "weather": {
+    "alerts": [],
+    "raw_data": {
+      "description": "Nắng đẹp, lý tưởng cho mọi hoạt động ngoài trời",
+      "temp": 31.5
+    }
+  },
+  "food_suggestions": {
+    "meals": [
+      {
+        "time": "Sáng",
+        "suggestion": "Bún cá Ngọc Liên hoặc bánh hỏi cháo lòng Diên Hồng.",
+        "price_est": "40,000 VND"
+      },
+      {
+        "time": "Trưa",
+        "suggestion": "Bánh xèo tôm nhảy Mỹ Cang, gà chỉ xôi cháy.",
+        "price_est": "150,000 VND"
+      },
+      {
+        "time": "Tối",
+        "suggestion": "Ăn hải sản tẹt ga ở quán hải sản Hương Biển hoặc Mộng Mơ đường Xuân Diệu.",
+        "price_est": "350,000 VND"
+      }
+    ],
+    "general_note": "Với ngân sách cao cấp, bạn hoàn toàn có thể thưởng thức tôm hùm và cua Huỳnh Đế mỗi ngày."
+  },
+  "booking": {
+    "hotel": {
+      "name": "FLC Luxury Hotel & Resort Quy Nhơn",
+      "type": "Resort 5 Sao",
+      "rating": 4.8,
+      "address": "Khu 4, Nhơn Lý, Quy Nhơn",
+      "price_per_night": 3500000,
+      "description": "Khu nghỉ dưỡng sang trọng bậc nhất với sân golf, hồ bơi tuyệt đẹp và bãi biển riêng.",
+      "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945"
+    },
+    "transport": {
+      "type": "Thuê xe hơi tự lái / Xe đưa đón riêng",
+      "price_estimate": "1,200,000 VND/ngày",
+      "description": "Di chuyển cực kỳ thoải mái và chủ động tới mọi điểm du lịch.",
+      "provider_info": "Dịch vụ xe sang Quy Nhơn"
+    }
+  },
+  "local_guide_tips": [
+    {
+      "place": "Kỳ Co",
+      "background": "Thiên đường biển trong xanh nhất Quy Nhơn.",
+      "tips": "Nên đi cano ra đảo vào buổi sáng để ngắm san hô rõ nhất, buổi chiều sóng thường lớn."
+    },
+    {
+      "place": "Eo Gió",
+      "background": "Nơi ngắm hoàng hôn đẹp nhất Việt Nam.",
+      "tips": "Gió ở đây rất lớn, cẩn thận mũ nón và thiết bị quay chụp."
+    }
+  ],
+  "replan": {
+    "rain_triggered": false,
+    "budget_triggered": false
+  },
+  "final_translated": {
+    "translated_itinerary": "Đã sử dụng bản gốc tiếng Việt (Demo Cache)."
+  },
+  "agent_logs": []
+}

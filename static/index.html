@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quy Nhơn Smart Travel — AI-Powered Vietnam Tourism</title>
+  <meta name="description" content="Khám phá Quy Nhơn với AI. Lên kế hoạch du lịch thông minh, lịch trình cá nhân hóa, thời tiết thực, bản đồ tích hợp.">
+  <meta name="keywords" content="Quy Nhơn, du lịch, travel, Kỳ Co, Eo Gió, Bình Định, AI travel planner">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- ========== NAVBAR ========== -->
+<nav class="navbar" id="mainNav">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo" onclick="switchTab('home')">
+      <i class="fa-solid fa-umbrella-beach"></i>
+      <span>Quy Nhơn <em>Travel</em></span>
+    </a>
+    <div class="nav-tabs">
+      <button class="nav-tab active" id="tab-home" onclick="switchTab('home')">
+        <i class="fa-solid fa-house"></i> <span data-i18n="nav_home">Trang chủ</span>
+      </button>
+      <button class="nav-tab" id="tab-itinerary" onclick="switchTab('itinerary')">
+        <i class="fa-solid fa-route"></i> <span data-i18n="nav_itinerary">Lộ trình</span>
+      </button>
+      <button class="nav-tab" id="tab-hotels" onclick="switchTab('hotels')">
+        <i class="fa-solid fa-hotel"></i> <span data-i18n="nav_hotels">Khách sạn</span>
+      </button>
+      <button class="nav-tab" id="tab-food" onclick="switchTab('food')">
+        <i class="fa-solid fa-bowl-rice"></i> <span data-i18n="nav_food">Ẩm thực</span>
+      </button>
+      <button class="nav-tab" id="tab-chat" onclick="switchTab('chat')">
+        <i class="fa-solid fa-robot"></i> <span data-i18n="nav_chat">AI Chat</span>
+      </button>
+    </div>
+    <div class="nav-actions">
+      <!-- Language Switcher -->
+      <div class="lang-switcher" id="langSwitcher">
+        <button class="lang-btn active" data-lang="vi" onclick="switchLanguage('vi')">🇻🇳 VI</button>
+        <button class="lang-btn" data-lang="en" onclick="switchLanguage('en')">🇺🇸 EN</button>
+        <button class="lang-btn" data-lang="ja" onclick="switchLanguage('ja')">🇯🇵 JP</button>
+        <button class="lang-btn" data-lang="ko" onclick="switchLanguage('ko')">🇰🇷 KR</button>
+      </div>
+      <!-- Live Weather Badge -->
+      <div class="weather-badge" id="weatherBadge">
+        <img id="weatherIcon" src="" alt="weather" style="display:none">
+        <span id="weatherTemp">--°C</span>
+        <span id="weatherCond" class="weather-cond">Đang tải...</span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ========== TAB: HOME ========== -->
+<section id="page-home" class="page active">
+
+  <!-- Hero -->
+  <header class="hero" id="heroSection">
+    <div class="hero-slides">
+      <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1559628376-f3fe5f782a2e?q=80&w=1920&auto=format&fit=crop')"></div>
+      <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?q=80&w=1920&auto=format&fit=crop')"></div>
+      <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1920&auto=format&fit=crop')"></div>
+      <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=1920&auto=format&fit=crop')"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-particles" id="heroParticles"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span data-i18n="hero_badge">AI-Powered Travel Planning · Quy Nhơn 2025</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="title-line1" data-i18n="hero_title1">Quy Nhơn</span>
+        <span class="title-line2 hero-italic" data-i18n="hero_title2">Biển Xanh · Hồn Việt</span>
+      </h1>
+      <p class="hero-subtitle" data-i18n="hero_subtitle">
+        Khám phá Kỳ Co, Eo Gió & những hương vị không thể quên — được AI lên kế hoạch cho bạn
+      </p>
+
+      <!-- Quick Action Buttons -->
+      <div class="hero-actions">
+        <button class="btn-hero-primary" onclick="switchTab('itinerary')" id="planNowBtn">
+          <i class="fa-solid fa-map-location-dot"></i>
+          <span data-i18n="hero_cta_plan">Lên lịch trình ngay</span>
+        </button>
+        <button class="btn-hero-secondary" onclick="switchTab('chat')" id="askAIBtn">
+          <i class="fa-solid fa-robot"></i>
+          <span data-i18n="hero_cta_chat">Hỏi AI về Quy Nhơn</span>
+        </button>
+      </div>
+
+      <!-- Live Stats -->
+      <div class="hero-stats">
+        <div class="stat-item">
+          <strong>12+</strong>
+          <span data-i18n="stat_places">Địa điểm hot</span>
+        </div>
+        <span class="stat-sep">·</span>
+        <div class="stat-item">
+          <strong>6</strong>
+          <span data-i18n="stat_agents">AI Agents</span>
+        </div>
+        <span class="stat-sep">·</span>
+        <div class="stat-item">
+          <strong>4</strong>
+          <span data-i18n="stat_langs">Ngôn ngữ</span>
+        </div>
+        <span class="stat-sep">·</span>
+        <div class="stat-item" id="heroWeatherStat">
+          <strong id="heroTemp">--°</strong>
+          <span>Quy Nhơn</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide Indicators -->
+    <div class="slide-dots">
+      <button class="dot active" onclick="goToSlide(0)"></button>
+      <button class="dot" onclick="goToSlide(1)"></button>
+      <button class="dot" onclick="goToSlide(2)"></button>
+      <button class="dot" onclick="goToSlide(3)"></button>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      <span data-i18n="scroll_down">Cuộn xuống</span>
+    </div>
+  </header>
+
+  <!-- 5-Day Forecast Strip -->
+  <div class="forecast-strip" id="forecastStrip">
+    <div class="forecast-inner" id="forecastContent">
+      <div class="forecast-loading">
+        <i class="fa-solid fa-spinner fa-spin"></i> Đang tải thời tiết...
+      </div>
+    </div>
+  </div>
+
+  <!-- Places Section -->
+  <main class="main-container">
+
+    <section class="section" id="placesSection">
+      <div class="section-header">
+        <span class="section-eyebrow">🔥 <span data-i18n="eyebrow_trending">Hot mùa này</span></span>
+        <h2 class="section-title" data-i18n="places_title">Địa Điểm Nổi Tiếng</h2>
+        <p class="section-desc" data-i18n="places_desc">Những điểm đến được yêu thích nhất tại Quy Nhơn mùa này</p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="filter-tabs" id="placesFilter">
+        <button class="filter-btn active" data-filter="all" onclick="filterPlaces('all')">
+          <span data-i18n="filter_all">Tất cả</span>
+        </button>
+        <button class="filter-btn" data-filter="beach" onclick="filterPlaces('beach')">🏖️ <span data-i18n="filter_beach">Biển</span></button>
+        <button class="filter-btn" data-filter="island" onclick="filterPlaces('island')">🏝️ <span data-i18n="filter_island">Đảo</span></button>
+        <button class="filter-btn" data-filter="scenic" onclick="filterPlaces('scenic')">🌄 <span data-i18n="filter_scenic">Check-in</span></button>
+        <button class="filter-btn" data-filter="culture" onclick="filterPlaces('culture')">🏛️ <span data-i18n="filter_culture">Văn hóa</span></button>
+      </div>
+
+      <div class="places-grid" id="placesGrid">
+        <!-- Loaded dynamically -->
+        <div class="loading-placeholder">
+          <i class="fa-solid fa-spinner fa-spin fa-2x"></i>
+          <p data-i18n="loading_places">Đang tải địa điểm...</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Row -->
+    <section class="features-section">
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon-wrap blue">
+            <i class="fa-solid fa-brain"></i>
+          </div>
+          <h3 data-i18n="feat1_title">6 AI Agents</h3>
+          <p data-i18n="feat1_desc">Lịch trình, Thời tiết, Ẩm thực, Đặt phòng, Hướng dẫn, Dịch thuật — hoạt động song song</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon-wrap teal">
+            <i class="fa-solid fa-map-location-dot"></i>
+          </div>
+          <h3 data-i18n="feat2_title">Google Maps Tích hợp</h3>
+          <p data-i18n="feat2_desc">Xem bản đồ và chỉ đường ngay trong web, không cần chuyển tab</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon-wrap orange">
+            <i class="fa-solid fa-cloud-sun-rain"></i>
+          </div>
+          <h3 data-i18n="feat3_title">Re-plan Thông Minh</h3>
+          <p data-i18n="feat3_desc">Khi trời mưa hoặc vượt budget, AI tự động tạo lịch trình thay thế</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon-wrap purple">
+            <i class="fa-solid fa-earth-asia"></i>
+          </div>
+          <h3 data-i18n="feat4_title">4 Ngôn ngữ</h3>
+          <p data-i18n="feat4_desc">Hỗ trợ Việt, Anh, Nhật, Hàn — dành cho cả khách quốc tế</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</section>
+
+<!-- ========== TAB: ITINERARY ========== -->
+<section id="page-itinerary" class="page">
+  <div class="page-hero-mini" style="background-image:url('https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?q=80&w=1920&auto=format&fit=crop')">
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <h1 data-i18n="itin_page_title">Lên Lịch Trình AI</h1>
+      <p data-i18n="itin_page_sub">Điền thông tin — AI sẽ thiết kế chuyến đi hoàn hảo cho bạn</p>
+    </div>
+  </div>
+
+  <div class="main-container">
+    <div class="planner-layout">
+      <!-- Planning Form -->
+      <div class="planner-form-wrap" id="plannerFormWrap">
+        <div class="plan-form-card">
+          <div class="form-header">
+            <i class="fa-solid fa-sliders"></i>
+            <h2 data-i18n="form_title">Tùy chỉnh chuyến đi</h2>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-field">
+              <label><i class="fa-solid fa-location-dot"></i> <span data-i18n="form_dest">Điểm đến</span></label>
+              <input type="text" id="destination" value="Quy Nhơn" placeholder="Quy Nhơn..." autocomplete="off">
+            </div>
+            <div class="form-field">
+              <label><i class="fa-regular fa-calendar-days"></i> <span data-i18n="form_days">Số ngày</span></label>
+              <select id="days">
+                <option value="1">1 ngày</option>
+                <option value="2">2 ngày</option>
+                <option value="3" selected>3 ngày</option>
+                <option value="4">4 ngày</option>
+                <option value="5">5 ngày</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label><i class="fa-solid fa-coins"></i> <span data-i18n="form_budget">Ngân sách/ngày</span></label>
+              <select id="budget">
+                <option value="500000">500.000 ₫ (Tiết kiệm)</option>
+                <option value="1000000">1.000.000 ₫ (Bình dân)</option>
+                <option value="2000000" selected>2.000.000 ₫ (Thoải mái)</option>
+                <option value="5000000">5.000.000 ₫ (Cao cấp)</option>
+                <option value="10000000">10.000.000 ₫ (Luxury)</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label><i class="fa-solid fa-language"></i> <span data-i18n="form_lang">Ngôn ngữ kết quả</span></label>
+              <select id="resultLanguage">
+                <option value="Tiếng Việt">🇻🇳 Tiếng Việt</option>
+                <option value="English">🇺🇸 English</option>
+                <option value="日本語">🇯🇵 日本語</option>
+                <option value="한국어">🇰🇷 한국어</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label><i class="fa-solid fa-cloud-sun"></i> <span data-i18n="form_weather">Mô phỏng thời tiết</span></label>
+              <select id="weatherSim">
+                <option value="Nắng đẹp">☀️ Nắng đẹp (Bình thường)</option>
+                <option value="Mưa lớn (Demo Cảnh báo)">🌧️ Mưa lớn (Demo Re-plan)</option>
+                <option value="Ngẫu nhiên">🎲 Ngẫu nhiên</option>
+              </select>
+            </div>
+            <div class="form-field form-field--check">
+              <label class="checkbox-label">
+                <input type="checkbox" id="hasKids">
+                <span class="checkmark"></span>
+                <span data-i18n="form_kids">Có trẻ nhỏ đi cùng</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-field form-field--full">
+            <label><i class="fa-solid fa-heart"></i> <span data-i18n="form_prefs">Sở thích (tuỳ chọn)</span></label>
+            <input type="text" id="preferences" placeholder="Ví dụ: Thích biển, mê hải sản, muốn chụp ảnh đẹp...">
+          </div>
+
+          <button class="btn-plan" id="planBtn" onclick="submitSearch()">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <span data-i18n="form_submit">Tạo Lịch Trình AI</span>
+          </button>
+
+          <!-- Quick Presets -->
+          <div class="presets-quick">
+            <span data-i18n="presets_label">Gợi ý nhanh:</span>
+            <button class="preset-pill" onclick="applyPreset('Quy Nhơn',3,2000000,'Nắng đẹp')">🏖️ 3N/Bình dân</button>
+            <button class="preset-pill" onclick="applyPreset('Quy Nhơn',2,5000000,'Nắng đẹp')">💎 2N/Cao cấp</button>
+            <button class="preset-pill" onclick="applyPreset('Quy Nhơn',3,1000000,'Mưa lớn (Demo Cảnh báo)')">🌧️ Demo Mưa</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Progress + Results -->
+      <div class="planner-results-wrap" id="plannerResultsWrap">
+
+        <!-- Initial state -->
+        <div class="results-placeholder" id="resultsPlaceholder">
+          <div class="placeholder-inner">
+            <div class="placeholder-icon">🗺️</div>
+            <h3 data-i18n="placeholder_title">Sẵn sàng khám phá Quy Nhơn?</h3>
+            <p data-i18n="placeholder_desc">Điền thông tin bên trái và nhấn "Tạo Lịch Trình AI" để bắt đầu</p>
+          </div>
+        </div>
+
+        <!-- Progress Container -->
+        <div id="progressContainer" class="progress-container hidden">
+          <div class="progress-card">
+            <div class="progress-header">
+              <div class="progress-header-left">
+                <span class="pulse-dot"></span>
+                <h3 data-i18n="progress_title">AI đang phân tích & thiết kế lịch trình...</h3>
+              </div>
+              <span id="currentAction" class="progress-badge">Khởi tạo...</span>
+            </div>
+            <div class="progress-agents" id="progressAgents">
+              <div class="agent-chip" id="chip-itinerary"><i class="fa-solid fa-route"></i> Itinerary</div>
+              <div class="agent-chip" id="chip-weather"><i class="fa-solid fa-cloud-sun"></i> Weather</div>
+              <div class="agent-chip" id="chip-food"><i class="fa-solid fa-utensils"></i> Food</div>
+              <div class="agent-chip" id="chip-booking"><i class="fa-solid fa-hotel"></i> Booking</div>
+              <div class="agent-chip" id="chip-replan"><i class="fa-solid fa-rotate"></i> Re-plan</div>
+              <div class="agent-chip" id="chip-translate"><i class="fa-solid fa-language"></i> Translate</div>
+            </div>
+            <div id="logArea" class="log-area"></div>
+          </div>
+        </div>
+
+        <!-- Results Container -->
+        <div id="resultsContainer" class="hidden">
+          <div class="results-header">
+            <h2 id="resultTitle" class="results-title">📍 Kế hoạch du lịch</h2>
+            <div class="results-actions">
+              <button onclick="resetSearch()" class="btn btn-outline">
+                <i class="fa-solid fa-arrow-left"></i> <span data-i18n="btn_back">Tìm lại</span>
+              </button>
+              <button onclick="downloadItinerary()" class="btn btn-primary">
+                <i class="fa-solid fa-download"></i> <span data-i18n="btn_download">Tải lịch trình</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Replan Alert -->
+          <div id="replanAlert" class="replan-alert hidden">
+            <div class="replan-alert-inner">
+              <div class="replan-alert-header">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <h3 id="replanAlertTitle">⚠️ AI phát hiện vấn đề với lịch trình</h3>
+              </div>
+              <p id="replanAlertDesc"></p>
+              <div id="replanAlternatives" class="replan-alternatives"></div>
+            </div>
+          </div>
+
+          <!-- Booking Cards -->
+          <div id="bookingSection" class="booking-grid hidden"></div>
+
+          <!-- Google Maps -->
+          <div class="map-section" id="mapSection">
+            <div class="map-header">
+              <i class="fa-solid fa-map-location-dot"></i>
+              <h3 data-i18n="map_title">Bản đồ lịch trình</h3>
+            </div>
+            <div class="map-embed-wrap" id="mapEmbed">
+              <iframe
+                id="googleMapIframe"
+                src="https://maps.google.com/?q=13.7765,109.2342&z=13&output=embed"
+                allowfullscreen
+                loading="lazy"
+                title="Bản đồ Quy Nhơn">
+              </iframe>
+            </div>
+          </div>
+
+          <!-- Timeline -->
+          <div class="timeline-card">
+            <h3 class="timeline-heading">
+              <i class="fa-regular fa-calendar-check"></i>
+              <span data-i18n="timeline_title">Lịch trình chi tiết</span>
+            </h3>
+            <div id="itineraryContent" class="timeline-list"></div>
+          </div>
+
+          <!-- Food Suggestions -->
+          <div id="foodSuggestionsSection" class="food-grid-section hidden">
+            <h3 class="section-subheading">
+              <i class="fa-solid fa-bowl-rice"></i>
+              <span data-i18n="food_suggestions_title">Gợi ý ẩm thực theo lịch trình</span>
+            </h3>
+            <div id="foodSuggestionsGrid" class="food-suggestions-grid"></div>
+          </div>
+
+          <!-- Weather Alerts -->
+          <div id="weatherAlertSection" class="weather-alert-section hidden">
+            <h3 class="section-subheading">
+              <i class="fa-solid fa-cloud-bolt"></i>
+              <span data-i18n="weather_alerts_title">Cảnh báo thời tiết</span>
+            </h3>
+            <div id="weatherAlerts"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TAB: HOTELS ========== -->
+<section id="page-hotels" class="page">
+  <div class="page-hero-mini" style="background-image:url('https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1920&auto=format&fit=crop')">
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <h1 data-i18n="hotels_page_title">Nơi Lưu Trú Quy Nhơn</h1>
+      <p data-i18n="hotels_page_sub">Từ hostel backpacker đến resort 5 sao — phù hợp mọi ngân sách</p>
+    </div>
+  </div>
+
+  <div class="main-container">
+    <!-- Filter -->
+    <div class="filter-tabs">
+      <button class="filter-btn active" data-filter="all" onclick="filterHotels('all')">
+        <span data-i18n="filter_all">Tất cả</span>
+      </button>
+      <button class="filter-btn" data-filter="Bình dân" onclick="filterHotels('Bình dân')">
+        💰 <span data-i18n="filter_budget">Bình dân</span>
+      </button>
+      <button class="filter-btn" data-filter="Trung cấp" onclick="filterHotels('Trung cấp')">
+        🏨 <span data-i18n="filter_midrange">Trung cấp</span>
+      </button>
+      <button class="filter-btn" data-filter="Cao cấp" onclick="filterHotels('Cao cấp')">
+        👑 <span data-i18n="filter_luxury">Cao cấp</span>
+      </button>
+    </div>
+
+    <div class="hotels-grid" id="hotelsGrid">
+      <div class="loading-placeholder">
+        <i class="fa-solid fa-spinner fa-spin fa-2x"></i>
+        <p data-i18n="loading_hotels">Đang tải khách sạn...</p>
+      </div>
+    </div>
+
+    <!-- Map for selected hotel -->
+    <div class="selected-map-section hidden" id="hotelMapSection">
+      <div class="map-header">
+        <i class="fa-solid fa-map-location-dot"></i>
+        <h3 id="hotelMapTitle">Bản đồ khách sạn</h3>
+      </div>
+      <div class="map-embed-wrap">
+        <iframe id="hotelMapIframe" src="" allowfullscreen loading="lazy" title="Hotel Map"></iframe>
+      </div>
+      <div id="nearbyAmenities" class="nearby-amenities"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TAB: FOOD ========== -->
+<section id="page-food" class="page">
+  <div class="page-hero-mini" style="background-image:url('https://images.unsplash.com/photo-1569718212165-3a8278d5f624?q=80&w=1920&auto=format&fit=crop')">
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <h1 data-i18n="food_page_title">Ẩm Thực Quy Nhơn</h1>
+      <p data-i18n="food_page_sub">Những hương vị đặc trưng không thể bỏ qua — bình dân & ngon</p>
+    </div>
+  </div>
+
+  <div class="main-container">
+    <!-- Meal Filter -->
+    <div class="filter-tabs">
+      <button class="filter-btn active" data-filter="all" onclick="filterFood('all')">
+        <span data-i18n="filter_all">Tất cả</span>
+      </button>
+      <button class="filter-btn" data-filter="Sáng" onclick="filterFood('Sáng')">🌅 <span data-i18n="filter_breakfast">Ăn sáng</span></button>
+      <button class="filter-btn" data-filter="Trưa" onclick="filterFood('Trưa')">☀️ <span data-i18n="filter_lunch">Ăn trưa</span></button>
+      <button class="filter-btn" data-filter="Tối" onclick="filterFood('Tối')">🌙 <span data-i18n="filter_dinner">Ăn tối</span></button>
+      <button class="filter-btn" data-filter="Bình dân" onclick="filterFood('Bình dân')">💰 <span data-i18n="filter_budget">Bình dân</span></button>
+    </div>
+
+    <div class="food-grid" id="foodGrid">
+      <div class="loading-placeholder">
+        <i class="fa-solid fa-spinner fa-spin fa-2x"></i>
+        <p data-i18n="loading_food">Đang tải quán ăn...</p>
+      </div>
+    </div>
+
+    <!-- Selected Restaurant Map -->
+    <div class="selected-map-section hidden" id="foodMapSection">
+      <div class="map-header">
+        <i class="fa-solid fa-map-location-dot"></i>
+        <h3 id="foodMapTitle">Bản đồ quán ăn</h3>
+      </div>
+      <div class="map-embed-wrap">
+        <iframe id="foodMapIframe" src="" allowfullscreen loading="lazy" title="Food Map"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TAB: AI CHAT ========== -->
+<section id="page-chat" class="page">
+  <div class="page-hero-mini chat-hero" style="background-image:url('https://images.unsplash.com/photo-1483683804023-6ccdb62f86ef?q=80&w=1920&auto=format&fit=crop')">
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <h1 data-i18n="chat_page_title">AI Travel Assistant</h1>
+      <p data-i18n="chat_page_sub">Hỏi bất cứ điều gì về du lịch Quy Nhơn</p>
+    </div>
+  </div>
+
+  <div class="main-container">
+    <div class="chat-layout">
+      <!-- Quick Questions -->
+      <div class="chat-suggestions" id="chatSuggestions">
+        <h3 data-i18n="chat_suggest_title">💡 Câu hỏi gợi ý</h3>
+        <div class="suggest-grid">
+          <button class="suggest-btn" onclick="sendSuggestedChat(this)" data-text-vi="Thời điểm tốt nhất để đến Quy Nhơn là khi nào?" data-text-en="What is the best time to visit Quy Nhon?" data-text-ja="九岩（クイニョン）を訪れるベストシーズンはいつですか？" data-text-ko="꾸이년 방문 최적 시기는 언제인가요?">
+            📅 <span data-i18n="suggest1">Thời điểm tốt nhất để đến Quy Nhơn?</span>
+          </button>
+          <button class="suggest-btn" onclick="sendSuggestedChat(this)" data-text-vi="Cách đi từ TP.HCM đến Quy Nhơn như thế nào?" data-text-en="How to travel from Ho Chi Minh City to Quy Nhon?" data-text-ja="ホーチミン市から九岩までの行き方は？" data-text-ko="호치민시에서 꾸이년까지 어떻게 가나요?">
+            ✈️ <span data-i18n="suggest2">Cách di chuyển đến Quy Nhơn?</span>
+          </button>
+          <button class="suggest-btn" onclick="sendSuggestedChat(this)" data-text-vi="Đặc sản không nên bỏ qua ở Quy Nhơn là gì?" data-text-en="What are the must-try local specialties in Quy Nhon?" data-text-ja="九岩で絶対食べるべき名物料理は何ですか？" data-text-ko="꾸이년에서 꼭 먹어야 할 특산물은 무엇인가요?">
+            🍜 <span data-i18n="suggest3">Đặc sản không thể bỏ qua?</span>
+          </button>
+          <button class="suggest-btn" onclick="sendSuggestedChat(this)" data-text-vi="Kỳ Co và Eo Gió có gì khác nhau?" data-text-en="What is the difference between Ky Co and Eo Gio?" data-text-ja="キーコーとエーオジョーの違いは何ですか？" data-text-ko="키꼬와 에오지오의 차이점은 무엇인가요?">
+            🏖️ <span data-i18n="suggest4">Kỳ Co vs Eo Gió — khác nhau thế nào?</span>
+          </button>
+          <button class="suggest-btn" onclick="sendSuggestedChat(this)" data-text-vi="Ngân sách 3 ngày ở Quy Nhơn cần bao nhiêu tiền?" data-text-en="How much budget do I need for 3 days in Quy Nhon?" data-text-ja="九岩で3日間過ごすのに必要な予算はどのくらいですか？" data-text-ko="꾸이년 3일 여행 예산은 얼마나 필요한가요?">
+            💰 <span data-i18n="suggest5">Ngân sách 3 ngày cần bao nhiêu?</span>
+          </button>
+          <button class="suggest-btn" onclick="sendSuggestedChat(this)" data-text-vi="Những lưu ý gì khi đi tắm biển ở Quy Nhơn?" data-text-en="What should I know before swimming at Quy Nhon beaches?" data-text-ja="九岩のビーチで泳ぐ際の注意事項は？" data-text-ko="꾸이년 해변에서 수영할 때 주의사항은?">
+            ⚠️ <span data-i18n="suggest6">Lưu ý khi tắm biển Quy Nhơn?</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Chat Window -->
+      <div class="chat-window">
+        <div class="chat-header">
+          <div class="chat-avatar">
+            <i class="fa-solid fa-robot"></i>
+          </div>
+          <div class="chat-header-info">
+            <strong>Quy Nhơn AI Assistant</strong>
+            <span class="chat-status"><span class="status-dot"></span> <span data-i18n="chat_online">Đang hoạt động</span></span>
+          </div>
+          <div class="chat-lang-badge" id="chatLangBadge">🇻🇳 VI</div>
+        </div>
+
+        <div class="chat-messages" id="chatMessages">
+          <div class="chat-msg bot-msg">
+            <div class="bot-avatar"><i class="fa-solid fa-robot"></i></div>
+            <div class="msg-bubble">
+              <p data-i18n="chat_welcome">Xin chào! 👋 Tôi là AI trợ lý du lịch Quy Nhơn.<br>Hỏi tôi bất cứ điều gì về biển đẹp, đặc sản ngon, khách sạn phù hợp — tôi sẵn sàng giúp bạn! 🌊</p>
+              <span class="msg-time">Ngay bây giờ</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="chat-input-area">
+          <input type="text" id="chatInput" class="chat-input" placeholder="" data-i18n-placeholder="chat_placeholder" onkeypress="if(event.key==='Enter')sendChat()">
+          <button class="chat-send-btn" onclick="sendChat()" id="chatSendBtn">
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PLACE DETAIL MODAL ========== -->
+<div class="modal-overlay" id="placeModal" onclick="closePlaceModal(event)">
+  <div class="modal-card" id="placeModalCard">
+    <button class="modal-close" onclick="closePlaceModal()"><i class="fa-solid fa-xmark"></i></button>
+    <div class="modal-img-wrap">
+      <img id="modalImg" src="" alt="" class="modal-img">
+      <div class="modal-img-overlay"></div>
+      <div class="modal-badges" id="modalBadges"></div>
+    </div>
+    <div class="modal-body">
+      <h2 id="modalName" class="modal-title"></h2>
+      <div class="modal-meta">
+        <span id="modalRating" class="modal-rating"></span>
+        <span id="modalPrice" class="modal-price"></span>
+        <span id="modalDuration" class="modal-duration"></span>
+      </div>
+      <p id="modalDesc" class="modal-desc"></p>
+      <div class="modal-tips" id="modalTipsWrap">
+        <i class="fa-solid fa-lightbulb"></i>
+        <span id="modalTips"></span>
+      </div>
+      <!-- Reviews -->
+      <div class="modal-reviews" id="modalReviews"></div>
+      <!-- Action buttons -->
+      <div class="modal-actions">
+        <button class="btn btn-primary" id="modalMapBtn" onclick="openPlaceOnMap()">
+          <i class="fa-solid fa-map-location-dot"></i>
+          <span data-i18n="modal_maps">Xem trên Maps</span>
+        </button>
+        <button class="btn btn-outline" onclick="addToItinerary()">
+          <i class="fa-solid fa-plus"></i>
+          <span data-i18n="modal_add_itin">Thêm vào lịch trình</span>
+        </button>
+      </div>
+      <!-- Nearby on map -->
+      <div class="modal-map-section">
+        <h4 data-i18n="modal_nearby_title">📍 Vị trí & Tiện ích gần đây</h4>
+        <div class="modal-map-embed">
+          <iframe id="modalMapIframe" src="" allowfullscreen loading="lazy" title="Place Map"></iframe>
+        </div>
+        <div class="nearby-chips" id="modalNearbyChips">
+          <span class="nearby-chip"><i class="fa-solid fa-utensils"></i> Nhà hàng</span>
+          <span class="nearby-chip"><i class="fa-solid fa-building-columns"></i> ATM</span>
+          <span class="nearby-chip"><i class="fa-solid fa-car-side"></i> Bãi đỗ xe</span>
+          <span class="nearby-chip"><i class="fa-solid fa-store"></i> Cửa hàng</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== FOOTER ========== -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <i class="fa-solid fa-umbrella-beach"></i>
+      <strong>Quy Nhơn Smart Travel</strong>
+    </div>
+    <p class="footer-desc" data-i18n="footer_desc">Powered by Gemini AI · OpenWeatherMap · Google Maps</p>
+    <div class="footer-langs">
+      <span>🇻🇳 Tiếng Việt</span>
+      <span>🇺🇸 English</span>
+      <span>🇯🇵 日本語</span>
+      <span>🇰🇷 한국어</span>
+    </div>
+    <p class="footer-copy">© 2025 Quy Nhơn Smart Travel — AI Multi-Agent System</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

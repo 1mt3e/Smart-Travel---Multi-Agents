@@ -1,0 +1,154 @@
+{
+  "Quy Nhơn": {
+    "accommodations": [
+      {
+        "id": "flc_luxury",
+        "name": "FLC Luxury Hotel Quy Nhơn",
+        "type": "Resort 5 sao",
+        "price_per_night": 3500000,
+        "rating": 4.9,
+        "address": "Khu du lịch FLC, Ghềnh Ráng, TP. Quy Nhơn",
+        "budget_level": "Cao cấp",
+        "amenities": ["Hồ bơi vô cực", "Spa", "Nhà hàng fine dining", "Bãi biển riêng", "Sân golf"],
+        "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop",
+        "description": "Resort 5 sao đẳng cấp quốc tế với view biển tuyệt đẹp, bãi biển riêng và đầy đủ tiện nghi cao cấp.",
+        "google_maps_url": "https://maps.google.com/?q=13.8712,109.1789",
+        "reviews": [
+          {"user": "Minh Tuấn ⭐⭐⭐⭐⭐", "text": "Resort đẳng cấp nhất Quy Nhơn, bãi biển riêng cực đẹp!"},
+          {"user": "Jennifer C. ⭐⭐⭐⭐⭐", "text": "Absolutely world-class! The infinity pool overlooking the sea is breathtaking!"}
+        ]
+      },
+      {
+        "id": "avani",
+        "name": "Avani Quy Nhơn Resort",
+        "type": "Resort 4 sao",
+        "price_per_night": 1800000,
+        "rating": 4.7,
+        "address": "Ghềnh Ráng, TP. Quy Nhơn",
+        "budget_level": "Cao cấp",
+        "amenities": ["Hồ bơi", "Spa", "Nhà hàng", "Phòng gym", "Bar"],
+        "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe2fa?q=80&w=800&auto=format&fit=crop",
+        "description": "Resort hiện đại 4 sao với thiết kế sang trọng, view biển đẹp, phù hợp cho couples và honeymoon.",
+        "google_maps_url": "https://maps.google.com/?q=13.7456,109.2456",
+        "reviews": [
+          {"user": "Hồng Đào ⭐⭐⭐⭐⭐", "text": "Resort đẹp, phòng rộng, nhân viên tận tình. Honeymoon hoàn hảo!"},
+          {"user": "Michael B. ⭐⭐⭐⭐", "text": "Beautiful resort with stunning sea views. Perfect for romantic getaway."}
+        ]
+      },
+      {
+        "id": "seagull",
+        "name": "Seagull Hotel",
+        "type": "Khách sạn 3 sao",
+        "price_per_night": 800000,
+        "rating": 4.5,
+        "address": "489 An Dương Vương, P. Đống Đa, TP. Quy Nhơn",
+        "budget_level": "Trung cấp",
+        "amenities": ["Hồ bơi", "Nhà hàng", "View biển", "Wifi miễn phí"],
+        "image_url": "https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=800&auto=format&fit=crop",
+        "description": "Khách sạn 3 sao view biển ngay trung tâm thành phố, phòng sạch sẽ, nhân viên thân thiện.",
+        "google_maps_url": "https://maps.google.com/?q=13.7812,109.2312",
+        "reviews": [
+          {"user": "Bảo Long ⭐⭐⭐⭐", "text": "Phòng view biển cực đẹp, giá phải chăng, vị trí thuận tiện!"},
+          {"user": "Anna S. ⭐⭐⭐⭐", "text": "Great value for money! Sea view room is gorgeous and location is perfect."}
+        ]
+      },
+      {
+        "id": "hana_beach",
+        "name": "Hana Beach Hotel",
+        "type": "Khách sạn 3 sao",
+        "price_per_night": 650000,
+        "rating": 4.4,
+        "address": "78 Xuân Diệu, P. Hải Cảng, TP. Quy Nhơn",
+        "budget_level": "Trung cấp",
+        "amenities": ["View biển", "Wifi", "Bữa sáng", "Bar trên sân thượng"],
+        "image_url": "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=800&auto=format&fit=crop",
+        "description": "Khách sạn trung tâm view biển, gần chợ đêm và các nhà hàng hải sản. Bar rooftop rất đẹp.",
+        "google_maps_url": "https://maps.google.com/?q=13.7789,109.2234",
+        "reviews": [
+          {"user": "Lan Trinh ⭐⭐⭐⭐", "text": "Rooftop bar cực view, uống cà phê nhìn ra biển tuyệt vời!"}
+        ]
+      },
+      {
+        "id": "homestay_quy_nhon",
+        "name": "Homestay Biển Xanh",
+        "type": "Homestay",
+        "price_per_night": 300000,
+        "rating": 4.6,
+        "address": "12 Nguyễn Huệ, P. Lê Hồng Phong, TP. Quy Nhơn",
+        "budget_level": "Bình dân",
+        "amenities": ["Wifi", "Bếp chung", "Sân thượng", "Cho thuê xe máy"],
+        "image_url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?q=80&w=800&auto=format&fit=crop",
+        "description": "Homestay trung tâm giá rẻ, không khí gia đình, chủ nhà nhiệt tình tư vấn lịch trình.",
+        "google_maps_url": "https://maps.google.com/?q=13.7756,109.2197",
+        "reviews": [
+          {"user": "Trà My ⭐⭐⭐⭐⭐", "text": "Chị chủ nhiệt tình, phòng sạch, giá rẻ, vị trí đẹp!"},
+          {"user": "Kevin T. ⭐⭐⭐⭐⭐", "text": "Best budget accommodation! Host is super helpful with local tips!"}
+        ]
+      },
+      {
+        "id": "bb_hostel",
+        "name": "BB Hostel Quy Nhơn",
+        "type": "Hostel",
+        "price_per_night": 150000,
+        "rating": 4.5,
+        "address": "23 Tây Sơn, P. Ngô Mây, TP. Quy Nhơn",
+        "budget_level": "Bình dân",
+        "amenities": ["Dorm phòng lạnh", "Wifi tốc độ cao", "Bar", "Bếp chia sẻ", "Bộ đồ chơi"],
+        "image_url": "https://images.unsplash.com/photo-1520277739336-7bf67a4e4398?q=80&w=800&auto=format&fit=crop",
+        "description": "Hostel trendy dành cho backpacker và GenZ, không khí vui vẻ, kết bạn dễ dàng.",
+        "google_maps_url": "https://maps.google.com/?q=13.7723,109.2184",
+        "reviews": [
+          {"user": "Khánh Duy ⭐⭐⭐⭐", "text": "Hostel năng động, gặp nhiều bạn backpacker quốc tế, vui lắm!"},
+          {"user": "Emily R. ⭐⭐⭐⭐⭐", "text": "Met the most amazing people here! Super fun hostel for solo travelers!"}
+        ]
+      },
+      {
+        "id": "la_casita",
+        "name": "La Casita Boutique Homestay",
+        "type": "Boutique Homestay",
+        "price_per_night": 450000,
+        "rating": 4.8,
+        "address": "5 Hàn Mặc Tử, TP. Quy Nhơn",
+        "budget_level": "Trung cấp",
+        "amenities": ["Bể bơi nhỏ", "Vườn cây", "Sân thượng", "Bữa sáng", "Cho thuê xe đạp"],
+        "image_url": "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?q=80&w=800&auto=format&fit=crop",
+        "description": "Homestay boutique phong cách Địa Trung Hải ngay trung tâm, có bể bơi, vườn cây xanh mát.",
+        "google_maps_url": "https://maps.google.com/?q=13.7734,109.2201",
+        "reviews": [
+          {"user": "Phúc An ⭐⭐⭐⭐⭐", "text": "Không gian đẹp như ở Hy Lạp, sạch sẽ và yên tĩnh!"},
+          {"user": "Clara H. ⭐⭐⭐⭐⭐", "text": "Like staying in a Mediterranean villa! Beautiful pool and garden!"}
+        ]
+      }
+    ],
+    "transports": [
+      {
+        "type": "Thuê xe máy",
+        "price_estimate": "100,000 - 150,000 VND/ngày",
+        "provider_info": "Nhiều điểm thuê trên phố Trần Hưng Đạo & Phan Bội Châu. Số: 0905.xxx.xxx",
+        "description": "Phù hợp nhất cho thanh niên, backpacker muốn khám phá linh hoạt. Xe số hoặc xe tay ga.",
+        "suitable_for": ["Thanh niên", "Backpacker", "Không có trẻ nhỏ"]
+      },
+      {
+        "type": "Thuê ô tô tự lái",
+        "price_estimate": "600,000 - 900,000 VND/ngày",
+        "provider_info": "VinaCar Quy Nhơn: 0914.xxx.xxx | Minh Toàn Rent Car: 0905.xxx.xxx",
+        "description": "Phù hợp gia đình có trẻ nhỏ, nhóm 4-7 người, hoặc đi xa về Tây Sơn.",
+        "suitable_for": ["Gia đình", "Nhóm đông", "Có trẻ nhỏ"]
+      },
+      {
+        "type": "Taxi / Grab",
+        "price_estimate": "50,000 - 200,000 VND/chuyến trong thành phố",
+        "provider_info": "Grab app | Mai Linh Quy Nhơn: 0256.3822.666 | Tiên Sa Taxi: 0256.3560.000",
+        "description": "Tiện lợi cho di chuyển trong thành phố, không cần lo chỗ đậu xe.",
+        "suitable_for": ["Mọi đối tượng", "Di chuyển ngắn"]
+      },
+      {
+        "type": "Xe điện / Buýt biển",
+        "price_estimate": "10,000 - 30,000 VND/chuyến",
+        "provider_info": "Tuyến ven biển - Ghềnh Ráng: chạy 6h-21h",
+        "description": "Xe điện ven biển ngắm cảnh, phù hợp dạo phố, tiết kiệm chi phí.",
+        "suitable_for": ["Tiết kiệm", "Ngắm cảnh", "Trẻ em"]
+      }
+    ]
+  }
+}

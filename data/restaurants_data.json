@@ -1,0 +1,239 @@
+{
+  "Quy Nhơn": [
+    {
+      "id": "bun_cha_ca_ba_nam",
+      "name": "Bún chả cá Bà Năm",
+      "region": "Trung tâm",
+      "meal_type": ["Sáng", "Trưa"],
+      "specialty": "Bún chả cá Quy Nhơn",
+      "price_level": "Bình dân",
+      "avg_price_person": 35000,
+      "address": "45 Nguyễn Huệ, P. Lê Hồng Phong, TP. Quy Nhơn",
+      "rating": 4.8,
+      "open_hours": "6:00 - 11:00",
+      "image_url": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?q=80&w=800&auto=format&fit=crop",
+      "description": "Quán bún chả cá nổi tiếng nhất Quy Nhơn, hàng chục năm tuổi. Nước dùng ngọt từ xương cá tươi, chả cá chiên giòn.",
+      "must_try": "Bún chả cá + bánh tráng nướng",
+      "google_maps_url": "https://maps.google.com/?q=13.7745,109.2187",
+      "reviews": [
+        {"user": "Hải Yến ⭐⭐⭐⭐⭐", "text": "Đây là quán bún chả cá ngon nhất Quy Nhơn! Phải đến thử!"},
+        {"user": "Tom H. ⭐⭐⭐⭐⭐", "text": "Best fish noodle soup I've ever had! Only 35k VND, incredible value!"}
+      ]
+    },
+    {
+      "id": "banh_hoi_long_heo",
+      "name": "Bánh hỏi lòng heo 246",
+      "region": "Trung tâm",
+      "meal_type": ["Sáng"],
+      "specialty": "Bánh hỏi lòng heo",
+      "price_level": "Bình dân",
+      "avg_price_person": 45000,
+      "address": "246 Trần Hưng Đạo, TP. Quy Nhơn",
+      "rating": 4.7,
+      "open_hours": "6:00 - 10:00",
+      "image_url": "https://images.unsplash.com/photo-1617196034183-421b4040ed20?q=80&w=800&auto=format&fit=crop",
+      "description": "Quán bánh hỏi lòng heo nổi tiếng với sợi bánh hỏi mịn màng, lòng heo tươi sạch, nước chấm đặc biệt.",
+      "must_try": "Bánh hỏi lòng heo + chả chua",
+      "google_maps_url": "https://maps.google.com/?q=13.7802,109.2215",
+      "reviews": [
+        {"user": "Bích Phượng ⭐⭐⭐⭐⭐", "text": "Ăn sáng ở đây ngon nhất Quy Nhơn! 45k mà cực thơm!"},
+        {"user": "Sarah J. ⭐⭐⭐⭐", "text": "Delicious local breakfast specialty! The dipping sauce is amazing!"}
+      ]
+    },
+    {
+      "id": "cha_ram_tom_dat",
+      "name": "Chả ram tôm đất Phú Thọ",
+      "region": "Trung tâm",
+      "meal_type": ["Trưa", "Chiều"],
+      "specialty": "Chả ram tôm đất",
+      "price_level": "Bình dân",
+      "avg_price_person": 50000,
+      "address": "Đường Phú Thọ, P. Nhơn Bình, TP. Quy Nhơn",
+      "rating": 4.8,
+      "open_hours": "10:00 - 21:00",
+      "image_url": "https://images.unsplash.com/photo-1562802378-063ec186a863?q=80&w=800&auto=format&fit=crop",
+      "description": "Chả ram tôm đất là đặc sản độc đáo của Quy Nhơn - tôm đất tươi chiên giòn trong lớp bột mỏng, chấm nước mắm chua ngọt.",
+      "must_try": "Chả ram tôm đất + bánh tráng",
+      "google_maps_url": "https://maps.google.com/?q=13.7654,109.2089",
+      "reviews": [
+        {"user": "Quang Khải ⭐⭐⭐⭐⭐", "text": "Đặc sản must-eat ở Quy Nhơn! Tôm tươi, giòn ngon không tưởng!"},
+        {"user": "Mike C. ⭐⭐⭐⭐⭐", "text": "This is THE signature dish of Quy Nhon. Crispy shrimp rolls are incredible!"}
+      ]
+    },
+    {
+      "id": "banh_xeo_tom_nhay",
+      "name": "Bánh xèo tôm nhảy 41",
+      "region": "Trung tâm",
+      "meal_type": ["Trưa", "Chiều"],
+      "specialty": "Bánh xèo tôm nhảy",
+      "price_level": "Bình dân",
+      "avg_price_person": 60000,
+      "address": "41 Diệp Văn Cương, P. Ngô Mây, TP. Quy Nhơn",
+      "rating": 4.9,
+      "open_hours": "10:00 - 20:00",
+      "image_url": "https://images.unsplash.com/photo-1606755962773-d324e0a13086?q=80&w=800&auto=format&fit=crop",
+      "description": "Bánh xèo với tôm còn nhảy (tôm còn sống) đổ vào chảo, giòn rụm, độc đáo. Đặc sản không thể bỏ qua của Quy Nhơn.",
+      "must_try": "Bánh xèo tôm nhảy cuốn rau + chấm nước mắm",
+      "google_maps_url": "https://maps.google.com/?q=13.7723,109.2165",
+      "reviews": [
+        {"user": "Ngọc Mai ⭐⭐⭐⭐⭐", "text": "Bánh xèo giòn, tôm tươi nhảy muốn trốn - cực vui và ngon!"},
+        {"user": "Amy L. ⭐⭐⭐⭐⭐", "text": "They put live shrimp directly into the batter! So fresh and crispy!"}
+      ]
+    },
+    {
+      "id": "chao_sua",
+      "name": "Cháo sứa Bà Hai",
+      "region": "Nhơn Lý",
+      "meal_type": ["Trưa", "Tối"],
+      "specialty": "Cháo sứa",
+      "price_level": "Bình dân",
+      "avg_price_person": 40000,
+      "address": "Cảng Nhơn Hải, Nhơn Lý, Quy Nhơn",
+      "rating": 4.6,
+      "open_hours": "11:00 - 20:00",
+      "image_url": "https://images.unsplash.com/photo-1547592166-23ac45744acd?q=80&w=800&auto=format&fit=crop",
+      "description": "Cháo sứa biển - đặc sản siêu độc đáo chỉ có ở vùng biển Quy Nhơn, sứa tươi dai giòn trong cháo nóng hổi.",
+      "must_try": "Cháo sứa + gỏi sứa",
+      "google_maps_url": "https://maps.google.com/?q=13.7012,109.2812",
+      "reviews": [
+        {"user": "Thùy Linh ⭐⭐⭐⭐⭐", "text": "Lần đầu ăn cháo sứa, ngon hơn tưởng tượng nhiều! Độc đáo!"}
+      ]
+    },
+    {
+      "id": "hai_san_2_anh_em",
+      "name": "Nhà hàng Hải Sản 2 Anh Em",
+      "region": "Trung tâm",
+      "meal_type": ["Trưa", "Tối"],
+      "specialty": "Hải sản tươi sống",
+      "price_level": "Trung cấp",
+      "avg_price_person": 200000,
+      "address": "12 Xuân Diệu, P. Hải Cảng, TP. Quy Nhơn",
+      "rating": 4.7,
+      "open_hours": "10:00 - 22:00",
+      "image_url": "https://images.unsplash.com/photo-1559742811-822873691df8?q=80&w=800&auto=format&fit=crop",
+      "description": "Nhà hàng hải sản tươi sống nổi tiếng nhất Quy Nhơn. Tôm hùm, cua, mực, cá thui bơi ngay trong bể.",
+      "must_try": "Tôm hùm nướng phô mai, ghẹ hấp bia, mực chiên giòn",
+      "google_maps_url": "https://maps.google.com/?q=13.7789,109.2234",
+      "reviews": [
+        {"user": "Đức Anh ⭐⭐⭐⭐⭐", "text": "Hải sản siêu tươi, giá cả hợp lý so với chất lượng. Recommended!"},
+        {"user": "David K. ⭐⭐⭐⭐⭐", "text": "Freshest seafood I had in Vietnam! The lobster is incredible!"}
+      ]
+    },
+    {
+      "id": "hai_san_ky_co",
+      "name": "Hải sản Kỳ Co - Bãi Nhơn Lý",
+      "region": "Nhơn Lý",
+      "meal_type": ["Trưa"],
+      "specialty": "Hải sản nướng biển",
+      "price_level": "Bình dân",
+      "avg_price_person": 120000,
+      "address": "Bến thuyền Nhơn Lý, Quy Nhơn",
+      "rating": 4.8,
+      "open_hours": "9:00 - 17:00",
+      "image_url": "https://images.unsplash.com/photo-1571091718767-18b5b1457add?q=80&w=800&auto=format&fit=crop",
+      "description": "Quán hải sản ngay bến thuyền đi Kỳ Co, hải sản tươi từ ngư dân địa phương, giá rẻ hơn trong thành phố.",
+      "must_try": "Ốc các loại, cua biển, mực nướng sa tế",
+      "google_maps_url": "https://maps.google.com/?q=13.6945,109.2712",
+      "reviews": [
+        {"user": "Phước Hậu ⭐⭐⭐⭐⭐", "text": "Ăn hải sản ngay bến cảng, tươi không thể tươi hơn!"}
+      ]
+    },
+    {
+      "id": "nem_nuong",
+      "name": "Quán Nem Nướng Lâm Anh",
+      "region": "Trung tâm",
+      "meal_type": ["Trưa", "Chiều"],
+      "specialty": "Nem nướng Quy Nhơn",
+      "price_level": "Bình dân",
+      "avg_price_person": 55000,
+      "address": "78 Nguyễn Thị Minh Khai, P. Trần Phú, TP. Quy Nhơn",
+      "rating": 4.6,
+      "open_hours": "10:00 - 21:00",
+      "image_url": "https://images.unsplash.com/photo-1554502078-ef0fc409efce?q=80&w=800&auto=format&fit=crop",
+      "description": "Nem nướng Quy Nhơn khác hẳn Nha Trang - nem mịn hơn, kèm bánh tráng và đồ chua rất đặc trưng.",
+      "must_try": "Nem nướng cuốn bánh tráng + bún",
+      "google_maps_url": "https://maps.google.com/?q=13.7765,109.2201",
+      "reviews": [
+        {"user": "Tâm Linh ⭐⭐⭐⭐", "text": "Nem nướng ngon, cuốn bánh tráng ăn không biết no!"}
+      ]
+    },
+    {
+      "id": "cafe_dong_duong",
+      "name": "Café Đông Dương",
+      "region": "Trung tâm",
+      "meal_type": ["Sáng", "Chiều", "Tối"],
+      "specialty": "Cà phê phin Việt Nam",
+      "price_level": "Bình dân",
+      "avg_price_person": 30000,
+      "address": "109 Trần Cao Vân, P. Thị Nại, TP. Quy Nhơn",
+      "rating": 4.7,
+      "open_hours": "6:30 - 22:00",
+      "image_url": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=800&auto=format&fit=crop",
+      "description": "Quán cà phê cổ điển mang phong cách Đông Dương thập niên 1960, không gian đẹp, cà phê phin ngon.",
+      "must_try": "Cà phê phin trứng, bạc xỉu",
+      "google_maps_url": "https://maps.google.com/?q=13.7745,109.2189",
+      "reviews": [
+        {"user": "Hà Chi ⭐⭐⭐⭐⭐", "text": "Không gian vintage cực đẹp, cà phê thơm, nhạc xưa nghe rất thích!"},
+        {"user": "Lucas M. ⭐⭐⭐⭐⭐", "text": "Beautiful retro Indochina vibes. Best Vietnamese coffee I had!"}
+      ]
+    },
+    {
+      "id": "bun_bo_ba_nam",
+      "name": "Bún bò Bà Năm",
+      "region": "Trung tâm",
+      "meal_type": ["Sáng", "Trưa"],
+      "specialty": "Bún bò Quy Nhơn",
+      "price_level": "Bình dân",
+      "avg_price_person": 40000,
+      "address": "25 Phan Bội Châu, P. Lê Hồng Phong, TP. Quy Nhơn",
+      "rating": 4.5,
+      "open_hours": "5:30 - 11:00",
+      "image_url": "https://images.unsplash.com/photo-1526318472351-c75fcf070305?q=80&w=800&auto=format&fit=crop",
+      "description": "Bún bò phong cách Bình Định - nước dùng đậm đà từ xả và mắm ruốc, bò gân mềm, chả heo dai.",
+      "must_try": "Bún bò đặc biệt",
+      "google_maps_url": "https://maps.google.com/?q=13.7745,109.2178",
+      "reviews": [
+        {"user": "Quang Tài ⭐⭐⭐⭐", "text": "Bún bò ngon, nước trong hơn Huế nhưng vẫn đậm vị, rất thích!"}
+      ]
+    },
+    {
+      "id": "com_ga_thanh_loi",
+      "name": "Cơm gà Thanh Lợi",
+      "region": "Trung tâm",
+      "meal_type": ["Trưa"],
+      "specialty": "Cơm gà Quy Nhơn",
+      "price_level": "Bình dân",
+      "avg_price_person": 50000,
+      "address": "58 Tây Sơn, P. Ngô Mây, TP. Quy Nhơn",
+      "rating": 4.8,
+      "open_hours": "10:30 - 14:00",
+      "image_url": "https://images.unsplash.com/photo-1598103442097-8b74394b95c3?q=80&w=800&auto=format&fit=crop",
+      "description": "Cơm gà Quy Nhơn - cơm được nấu từ nước luộc gà, dẻo thơm, gà xé sợi mềm, nước chấm gừng đặc trưng.",
+      "must_try": "Cơm gà đặc biệt + canh gà",
+      "google_maps_url": "https://maps.google.com/?q=13.7756,109.2201",
+      "reviews": [
+        {"user": "Thanh Hằng ⭐⭐⭐⭐⭐", "text": "Cơm gà Quy Nhơn ngon không kém Hội An! Phải thử khi đến đây!"},
+        {"user": "Kate W. ⭐⭐⭐⭐⭐", "text": "This chicken rice is phenomenal! So flavorful and affordable!"}
+      ]
+    },
+    {
+      "id": "lau_huy_tan",
+      "name": "Lẩu Huy Tân",
+      "region": "Trung tâm",
+      "meal_type": ["Tối"],
+      "specialty": "Lẩu hải sản",
+      "price_level": "Trung cấp",
+      "avg_price_person": 150000,
+      "address": "62 Nguyễn Thái Học, TP. Quy Nhơn",
+      "rating": 4.6,
+      "open_hours": "17:00 - 23:00",
+      "image_url": "https://images.unsplash.com/photo-1585032226651-759b368d7246?q=80&w=800&auto=format&fit=crop",
+      "description": "Quán lẩu hải sản tươi ngon cho buổi tối nhóm bạn, gia đình. Nước dùng thanh ngọt từ xương cá, hải sản đa dạng.",
+      "must_try": "Lẩu hải sản mix, bạch tuộc, tôm sú",
+      "google_maps_url": "https://maps.google.com/?q=13.7789,109.2195",
+      "reviews": [
+        {"user": "Duy Khánh ⭐⭐⭐⭐", "text": "Lẩu ngon, hải sản tươi, giá cả bình dân cho nhóm bạn!"}
+      ]
+    }
+  ]
+}

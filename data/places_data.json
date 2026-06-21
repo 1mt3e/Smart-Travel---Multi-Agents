@@ -1,0 +1,415 @@
+{
+  "Quy Nhơn": [
+    {
+      "id": "ky_co",
+      "name": "Bãi biển Kỳ Co",
+      "region": "Nhơn Lý",
+      "type": "beach",
+      "coordinate": {
+        "lat": 13.6712,
+        "lon": 109.2854
+      },
+      "avg_duration": "3h",
+      "price": 50000,
+      "rating": 4.9,
+      "season_note": "Đẹp nhất tháng 3-8, tránh mùa mưa (tháng 10-12)",
+      "image_url": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800&auto=format&fit=crop",
+      "description": "Vịnh biển đẹp nhất Quy Nhơn với nước trong xanh ngọc bích, cát trắng mịn. Đi thuyền từ cảng Nhơn Hải khoảng 20 phút.",
+      "tags": [
+        "Biển đảo",
+        "Check-in",
+        "Snorkeling",
+        "GenZ Hot"
+      ],
+      "tips": "Nên đi vào buổi sáng sớm (7-9h) để tránh nắng và đông khách. Đặt thuyền trước 1 ngày.",
+      "google_maps_url": "https://maps.google.com/?q=13.6712,109.2854",
+      "reviews": [
+        {
+          "user": "Minh Anh ⭐⭐⭐⭐⭐",
+          "text": "Nước trong vắt nhìn thấy đáy, cực đẹp! Đặt thuyền sớm nhé!"
+        },
+        {
+          "user": "James T. ⭐⭐⭐⭐⭐",
+          "text": "The most beautiful beach I've ever seen in Vietnam!"
+        },
+        {
+          "user": "田中花子 ⭐⭐⭐⭐⭐",
+          "text": "透き通った海が最高でした！ベトナムで一番美しいビーチ！"
+        }
+      ]
+    },
+    {
+      "id": "eo_gio",
+      "name": "Eo Gió",
+      "region": "Nhơn Lý",
+      "type": "scenic",
+      "coordinate": {
+        "lat": 13.6489,
+        "lon": 109.3024
+      },
+      "avg_duration": "2h",
+      "price": 20000,
+      "rating": 4.8,
+      "season_note": "Đẹp quanh năm, đặc sắc nhất khi gió lớn",
+      "image_url": "https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=800&auto=format&fit=crop",
+      "description": "Mũi đất nhỏ nhô ra biển, gió thổi mạnh quanh năm tạo cảm giác bay bổng. View toàn cảnh biển Quy Nhơn tuyệt đẹp.",
+      "tags": [
+        "Check-in",
+        "Scenic",
+        "Thiên nhiên",
+        "GenZ Hot"
+      ],
+      "tips": "Cẩn thận đá trơn, mang giày đế bằng. Chụp ảnh đẹp nhất lúc hoàng hôn (17h-18h).",
+      "google_maps_url": "https://maps.google.com/?q=13.6489,109.3024",
+      "reviews": [
+        {
+          "user": "Lan Phương ⭐⭐⭐⭐⭐",
+          "text": "Gió mạnh lắm, cảm giác như đang bay! View siêu đẹp!"
+        },
+        {
+          "user": "Sophie M. ⭐⭐⭐⭐",
+          "text": "Breathtaking views! The wind is really strong but the scenery is worth it."
+        },
+        {
+          "user": "박지현 ⭐⭐⭐⭐⭐",
+          "text": "바람이 정말 세지만 전망이 너무 아름다워요! 꼭 가보세요!"
+        }
+      ]
+    },
+    {
+      "id": "hon_kho",
+      "name": "Hòn Khô",
+      "region": "Nhơn Lý",
+      "type": "island",
+      "coordinate": {
+        "lat": 13.6951,
+        "lon": 109.3201
+      },
+      "avg_duration": "4h",
+      "price": 100000,
+      "rating": 4.7,
+      "season_note": "Chỉ đẹp mùa khô (tháng 3-8), không nên đi mùa biển động",
+      "image_url": "https://images.unsplash.com/photo-1559628376-f3fe5f782a2e?q=80&w=800&auto=format&fit=crop",
+      "description": "Hòn đảo hoang sơ với bãi san hô phong phú, thích hợp lặn ngắm san hô và câu cá cùng ngư dân.",
+      "tags": [
+        "Đảo",
+        "Snorkeling",
+        "Hoang sơ",
+        "Lặn biển"
+      ],
+      "tips": "Giá thuyền ~100-150k/người khứ hồi. Mang đủ đồ ăn vì không có quán xá trên đảo.",
+      "google_maps_url": "https://maps.google.com/?q=13.6951,109.3201",
+      "reviews": [
+        {
+          "user": "Tuấn Kiệt ⭐⭐⭐⭐⭐",
+          "text": "Đảo hoang sơ cực kỳ, san hô còn nguyên vẹn. Đáng tiền!"
+        },
+        {
+          "user": "Alex K. ⭐⭐⭐⭐",
+          "text": "Wild and beautiful island. Perfect for snorkeling!"
+        }
+      ]
+    },
+    {
+      "id": "bai_quy_nhon",
+      "name": "Bãi biển Quy Nhơn (trung tâm)",
+      "region": "Trung tâm",
+      "type": "beach",
+      "coordinate": {
+        "lat": 13.7765,
+        "lon": 109.2342
+      },
+      "avg_duration": "2h",
+      "price": 0,
+      "rating": 4.5,
+      "season_note": "Đẹp tháng 3-9",
+      "image_url": "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?q=80&w=800&auto=format&fit=crop",
+      "description": "Bãi biển trung tâm thành phố dài 3km, sạch đẹp, có đường đi bộ ven biển, thích hợp tản bộ sáng sớm và ngắm hoàng hôn.",
+      "tags": [
+        "Biển",
+        "Miễn phí",
+        "Đi bộ",
+        "Hoàng hôn"
+      ],
+      "tips": "Sáng sớm 5-7h rất đông người tập thể dục - không khí rất vui. Buổi tối có quán cóc ăn vặt ven biển.",
+      "google_maps_url": "https://maps.google.com/?q=13.7765,109.2342",
+      "reviews": [
+        {
+          "user": "Thu Hà ⭐⭐⭐⭐",
+          "text": "Bãi biển sạch, đường ven biển đẹp, đi bộ sáng rất thích!"
+        },
+        {
+          "user": "Emma W. ⭐⭐⭐⭐",
+          "text": "Beautiful city beach, great for morning walks and sunsets!"
+        }
+      ]
+    },
+    {
+      "id": "ghenh_rang",
+      "name": "Ghềnh Ráng Tiên Sa",
+      "region": "Trung tâm",
+      "type": "scenic",
+      "coordinate": {
+        "lat": 13.7456,
+        "lon": 109.2456
+      },
+      "avg_duration": "2h",
+      "price": 15000,
+      "rating": 4.6,
+      "season_note": "Đẹp quanh năm",
+      "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop",
+      "description": "Bãi đá ghềnh ven biển đẹp thơ mộng, nơi an nghỉ của nhà thơ Hàn Mặc Tử. Có hòn đá Tự Tình nổi tiếng và view biển tuyệt vời.",
+      "tags": [
+        "Check-in",
+        "Lịch sử",
+        "Biển đá",
+        "Lãng mạn"
+      ],
+      "tips": "Đến vào buổi chiều để chụp ảnh đẹp với ánh vàng. Đường đi xuống có bậc thang.",
+      "google_maps_url": "https://maps.google.com/?q=13.7456,109.2456",
+      "reviews": [
+        {
+          "user": "Hồng Nhung ⭐⭐⭐⭐⭐",
+          "text": "Ghềnh đá đẹp, lãng mạn, view biển cực đỉnh! Phải đến!"
+        },
+        {
+          "user": "Marco P. ⭐⭐⭐⭐",
+          "text": "Stunning rocky coast with poetic scenery. Very peaceful."
+        }
+      ]
+    },
+    {
+      "id": "thap_doi",
+      "name": "Tháp Đôi",
+      "region": "Trung tâm",
+      "type": "culture",
+      "coordinate": {
+        "lat": 13.7772,
+        "lon": 109.2195
+      },
+      "avg_duration": "1h",
+      "price": 15000,
+      "rating": 4.4,
+      "season_note": "Đẹp quanh năm",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Th%C3%A1p_%C4%90%C3%B4i%2C_Quy_Nh%C6%A1n%2C_B%C3%ACnh_%C4%90%E1%BB%8Bnh.JPG",
+      "description": "Cặp tháp Chăm cổ đại gần 800 năm tuổi ngay giữa lòng thành phố, biểu tượng văn hóa Bình Định.",
+      "tags": [
+        "Văn hóa",
+        "Lịch sử",
+        "Chăm Pa",
+        "Di tích"
+      ],
+      "tips": "Mua vé tại chỗ 15k, có hướng dẫn viên miễn phí. Nên ghé kết hợp vào buổi chiều khi ở trung tâm.",
+      "google_maps_url": "https://maps.google.com/?q=13.7772,109.2195",
+      "reviews": [
+        {
+          "user": "Văn Nam ⭐⭐⭐⭐",
+          "text": "Tháp cổ đẹp, ngay trung tâm, tiện kết hợp dạo phố."
+        },
+        {
+          "user": "Yuki S. ⭐⭐⭐⭐",
+          "text": "Ancient Cham towers right in the city center. Fascinating history!"
+        }
+      ]
+    },
+    {
+      "id": "thap_banh_it",
+      "name": "Tháp Bánh Ít",
+      "region": "Tuy Phước",
+      "type": "culture",
+      "coordinate": {
+        "lat": 13.7123,
+        "lon": 109.1456
+      },
+      "avg_duration": "2h",
+      "price": 20000,
+      "rating": 4.5,
+      "season_note": "Đẹp nhất lúc sáng sớm, tránh buổi trưa nắng",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/63/C%E1%BB%A5m_th%C3%A1p_B%C3%A1nh_%C3%8Dt%2C_Tuy_Ph%C6%B0%E1%BB%9Bc%2C_B%C3%ACnh_%C4%90%E1%BB%8Bnh.JPG",
+      "description": "Quần thể 4 tháp Chăm trên đỉnh đồi xanh mướt, một trong những cụm tháp Chăm đẹp nhất còn lại ở Việt Nam.",
+      "tags": [
+        "Văn hóa",
+        "Lịch sử",
+        "Đồi núi",
+        "Chăm Pa"
+      ],
+      "tips": "Đi xe máy khoảng 15km từ trung tâm. Trèo lên đỉnh đồi nhìn rất đẹp, nên đi sáng sớm.",
+      "google_maps_url": "https://maps.google.com/?q=13.7123,109.1456",
+      "reviews": [
+        {
+          "user": "Đình Hùng ⭐⭐⭐⭐⭐",
+          "text": "Tháp đẹp nhất tôi từng thấy, view từ đỉnh đồi rất mãn nhãn!"
+        },
+        {
+          "user": "Linda C. ⭐⭐⭐⭐⭐",
+          "text": "Hidden gem! The most beautiful Cham towers in Vietnam."
+        }
+      ]
+    },
+    {
+      "id": "cau_thi_nai",
+      "name": "Cầu Thị Nại",
+      "region": "Trung tâm",
+      "type": "landmark",
+      "coordinate": {
+        "lat": 13.8121,
+        "lon": 109.2051
+      },
+      "avg_duration": "1h",
+      "price": 0,
+      "rating": 4.7,
+      "season_note": "Đẹp nhất lúc bình minh và hoàng hôn",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/C%E1%BA%A7u_Th%E1%BB%8B_N%E1%BA%A1i%2C_Quy_Nh%C6%A1n.JPG",
+      "description": "Cầu vượt biển dài nhất Việt Nam (2.477m), kết nối thành phố với bán đảo Phương Mai. Cực đẹp lúc hoàng hôn.",
+      "tags": [
+        "Landmark",
+        "Check-in",
+        "Hoàng hôn",
+        "Miễn phí",
+        "GenZ Hot"
+      ],
+      "tips": "Đi xe máy hoặc đi bộ lên cầu lúc hoàng hôn (17h30-18h). Không có phí. Gió mạnh nên cẩn thận.",
+      "google_maps_url": "https://maps.google.com/?q=13.8121,109.2051",
+      "reviews": [
+        {
+          "user": "Quỳnh Anh ⭐⭐⭐⭐⭐",
+          "text": "Hoàng hôn trên cầu Thị Nại là trải nghiệm không thể quên!"
+        },
+        {
+          "user": "Robert L. ⭐⭐⭐⭐⭐",
+          "text": "Longest sea crossing bridge in Vietnam. Sunset here is magical!"
+        }
+      ]
+    },
+    {
+      "id": "quang_truong",
+      "name": "Quảng trường Nguyễn Tất Thành",
+      "region": "Trung tâm",
+      "type": "urban",
+      "coordinate": {
+        "lat": 13.7812,
+        "lon": 109.2198
+      },
+      "avg_duration": "1h",
+      "price": 0,
+      "rating": 4.3,
+      "season_note": "Đẹp nhất buổi tối khi có đèn",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/67/Quy_Nhon_city_from_above.jpg",
+      "description": "Quảng trường trung tâm thành phố, không gian rộng lớn bên bờ biển, buổi tối lung linh đèn màu.",
+      "tags": [
+        "Trung tâm",
+        "Đêm",
+        "Miễn phí",
+        "Dạo phố"
+      ],
+      "tips": "Buổi tối từ 19-21h rất đông người dạo chơi, có kem và đồ ăn vặt ven đường.",
+      "google_maps_url": "https://maps.google.com/?q=13.7812,109.2198",
+      "reviews": [
+        {
+          "user": "Kiều Linh ⭐⭐⭐⭐",
+          "text": "Tối đến rất vui, nhạc nước, kem ngon, không khí rất sôi động!"
+        }
+      ]
+    },
+    {
+      "id": "cho_dem",
+      "name": "Chợ đêm Quy Nhơn",
+      "region": "Trung tâm",
+      "type": "market",
+      "coordinate": {
+        "lat": 13.7756,
+        "lon": 109.2179
+      },
+      "avg_duration": "2h",
+      "price": 0,
+      "rating": 4.5,
+      "season_note": "Họp từ 18h-23h mỗi ngày",
+      "image_url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?q=80&w=800&auto=format&fit=crop",
+      "description": "Chợ đêm ven biển sôi động với hải sản tươi, đồ ăn vặt địa phương, quần áo và đồ lưu niệm.",
+      "tags": [
+        "Ẩm thực",
+        "Mua sắm",
+        "Buổi tối",
+        "Hải sản",
+        "Giá rẻ"
+      ],
+      "tips": "Trả giá khi mua đồ lưu niệm. Ăn hải sản nướng ngay tại chỗ giá rất hợp lý.",
+      "google_maps_url": "https://maps.google.com/?q=13.7756,109.2179",
+      "reviews": [
+        {
+          "user": "Bảo Châu ⭐⭐⭐⭐⭐",
+          "text": "Chợ đêm sầm uất, hải sản tươi ngon, giá cả hợp lý!"
+        },
+        {
+          "user": "Maria G. ⭐⭐⭐⭐",
+          "text": "Great night market with fresh seafood and local street food!"
+        }
+      ]
+    },
+    {
+      "id": "bai_dai",
+      "name": "Bãi Dài",
+      "region": "Bắc Quy Nhơn",
+      "type": "beach",
+      "coordinate": {
+        "lat": 13.8456,
+        "lon": 109.1987
+      },
+      "avg_duration": "3h",
+      "price": 0,
+      "rating": 4.6,
+      "season_note": "Đẹp mùa khô, ít người hơn Kỳ Co",
+      "image_url": "https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=800&auto=format&fit=crop",
+      "description": "Bãi biển dài yên bình, ít khách, nước xanh trong, cát trắng mịn. Lý tưởng cho những ai muốn không gian riêng tư.",
+      "tags": [
+        "Biển",
+        "Yên bình",
+        "Cát trắng",
+        "Hoang vắng"
+      ],
+      "tips": "Đi xe máy khoảng 25 phút từ trung tâm. Ít cơ sở vật chất, nên mang đồ ăn theo.",
+      "google_maps_url": "https://maps.google.com/?q=13.8456,109.1987",
+      "reviews": [
+        {
+          "user": "Hoàng Minh ⭐⭐⭐⭐⭐",
+          "text": "Bãi biển đẹp, ít người, yên tĩnh tuyệt vời. Thiên đường riêng!"
+        }
+      ]
+    },
+    {
+      "id": "flc_beach",
+      "name": "Khu du lịch FLC Quy Nhơn",
+      "region": "Bắc Quy Nhơn",
+      "type": "resort",
+      "coordinate": {
+        "lat": 13.8712,
+        "lon": 109.1789
+      },
+      "avg_duration": "3h",
+      "price": 200000,
+      "rating": 4.7,
+      "season_note": "Đẹp quanh năm",
+      "image_url": "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=800&auto=format&fit=crop",
+      "description": "Khu resort cao cấp với bãi biển riêng, sân golf, spa và nhà hàng hải sản đẳng cấp.",
+      "tags": [
+        "Resort",
+        "Cao cấp",
+        "Sân golf",
+        "Spa",
+        "Hải sản"
+      ],
+      "tips": "Có thể mua vé vào tắm biển và sử dụng tiện ích ngay cả khi không ở khách sạn.",
+      "google_maps_url": "https://maps.google.com/?q=13.8712,109.1789",
+      "reviews": [
+        {
+          "user": "Phương Linh ⭐⭐⭐⭐⭐",
+          "text": "Khu resort đẳng cấp, bãi biển đẹp xuất sắc, dịch vụ tuyệt vời!"
+        },
+        {
+          "user": "John D. ⭐⭐⭐⭐⭐",
+          "text": "World-class resort with pristine private beach. Absolutely stunning!"
+        }
+      ]
+    }
+  ]
+}
