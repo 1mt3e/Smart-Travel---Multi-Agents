@@ -476,24 +476,34 @@ function filterPlaces(type) {
 // ============================================================
 let currentModalPlace = null;
 
-function openPlaceModal(idx) {
-  const p = App.allPlaces[idx];
+function openPlaceModal(pOrIdx, type = 'place') {
+  let p = null;
+  if (type === 'hotel') p = App.allHotels[pOrIdx];
+  else if (type === 'food') p = App.allRestaurants[pOrIdx];
+  else p = App.allPlaces[pOrIdx];
+
   if (!p) return;
   currentModalPlace = p;
 
-  document.getElementById('modalImg').src = p.image_url;
-  document.getElementById('modalImg').alt = p.name;
-  document.getElementById('modalName').textContent = p.name;
-  document.getElementById('modalRating').innerHTML = `⭐ ${p.rating} / 5`;
-  document.getElementById('modalPrice').textContent = p.price === 0 ? '✓ Miễn phí vào cửa' : `Vé: ${p.price.toLocaleString('vi-VN')}₫`;
-  document.getElementById('modalDuration').textContent = `⏱️ ${p.avg_duration}`;
-  document.getElementById('modalDesc').textContent = p.description;
-  document.getElementById('modalTips').textContent = p.tips || '';
-  document.getElementById('modalTipsWrap').style.display = p.tips ? 'flex' : 'none';
+  document.getElementById('modalImg').src = p.image_url || '';
+  document.getElementById('modalImg').alt = p.name || '';
+  document.getElementById('modalName').textContent = p.name || '';
+  document.getElementById('modalRating').innerHTML = `⭐ ${p.rating || 5} / 5`;
+  
+  const price = p.price !== undefined ? p.price : (p.price_per_night !== undefined ? p.price_per_night : (p.avg_price_person !== undefined ? p.avg_price_person : 0));
+  const priceLabel = p.price_per_night ? '/đêm' : '';
+  document.getElementById('modalPrice').textContent = price === 0 ? '✓ Miễn phí' : `Giá: ${price.toLocaleString('vi-VN')}₫${priceLabel}`;
+  
+  const duration = p.avg_duration || p.type || p.specialty || '';
+  document.getElementById('modalDuration').textContent = `📌 ${duration}`;
+  document.getElementById('modalDesc').textContent = p.description || '';
+  document.getElementById('modalTips').textContent = p.tips || p.must_try || '';
+  document.getElementById('modalTipsWrap').style.display = (p.tips || p.must_try) ? 'flex' : 'none';
 
+  const tags = p.tags || [];
   const badges = [
     p.rating >= 4.8 ? `<span class="pbadge pbadge-hot">🔥 Top Pick</span>` : '',
-    p.tags.includes('GenZ Hot') ? `<span class="pbadge pbadge-trending">⚡ GenZ</span>` : ''
+    tags.includes('GenZ Hot') ? `<span class="pbadge pbadge-trending">⚡ GenZ</span>` : ''
   ].filter(Boolean).join('');
   document.getElementById('modalBadges').innerHTML = badges;
 
@@ -502,13 +512,19 @@ function openPlaceModal(idx) {
       <strong>${r.user}</strong><br>${r.text}
     </div>
   `).join('');
-  document.getElementById('modalReviews').innerHTML = reviewsHtml;
+  document.getElementById('modalReviews').innerHTML = reviewsHtml || '<div class="modal-review-item">Chưa có đánh giá</div>';
 
-  // Map embed
-  const mapSrc = `https://maps.google.com/?q=${p.coordinate.lat},${p.coordinate.lon}&z=15&output=embed`;
+  let mapSrc = '';
+  if (p.coordinate && p.coordinate.lat) {
+    mapSrc = `https://maps.google.com/?q=${p.coordinate.lat},${p.coordinate.lon}&z=15&output=embed`;
+  } else if (p.google_maps_url) {
+    mapSrc = p.google_maps_url + '&z=15&output=embed';
+  } else {
+    const q = encodeURIComponent(p.name + ' ' + (p.address || 'Quy Nhơn'));
+    mapSrc = `https://maps.google.com/?q=${q}&z=15&output=embed`;
+  }
   document.getElementById('modalMapIframe').src = mapSrc;
 
-  // Open modal
   const modal = document.getElementById('placeModal');
   modal.classList.add('open');
   document.body.style.overflow = 'hidden';
@@ -522,7 +538,13 @@ function closePlaceModal(e) {
 
 function openPlaceOnMap() {
   if (!currentModalPlace) return;
-  const url = currentModalPlace.google_maps_url || `https://maps.google.com/?q=${currentModalPlace.coordinate.lat},${currentModalPlace.coordinate.lon}`;
+  let url = currentModalPlace.google_maps_url;
+  if (!url && currentModalPlace.coordinate && currentModalPlace.coordinate.lat) {
+    url = `https://maps.google.com/?q=${currentModalPlace.coordinate.lat},${currentModalPlace.coordinate.lon}`;
+  }
+  if (!url) {
+    url = `https://maps.google.com/?q=${encodeURIComponent(currentModalPlace.name)}`;
+  }
   window.open(url, '_blank');
 }
 
@@ -624,7 +646,7 @@ function openNearby(query) {
 }
 
 function selectHotel(idx) {
-  showHotelMap(idx);
+  openPlaceModal(idx, 'hotel');
 }
 
 // ============================================================
@@ -653,7 +675,7 @@ function renderRestaurants(restaurants) {
     const stars = '⭐'.repeat(Math.round(r.rating));
 
     return `
-      <div class="food-card" onclick="showFoodMap(${idx})">
+      <div class="food-card" onclick="openPlaceModal(${idx}, 'food')">
         <div class="food-card-img">
           <img src="${r.image_url}" alt="${r.name}" loading="lazy">
         </div>
@@ -669,7 +691,7 @@ function renderRestaurants(restaurants) {
               <span class="food-price-badge ${priceClass}">${r.price_level} · ${r.avg_price_person.toLocaleString('vi-VN')}₫</span>
               <div class="food-rating" style="margin-top:0.3rem">${stars} ${r.rating}</div>
             </div>
-            <button class="food-map-btn" onclick="event.stopPropagation();showFoodMap(${idx})">
+            <button class="food-map-btn" onclick="event.stopPropagation();openPlaceModal(${idx}, 'food')">
               <i class="fa-solid fa-map-location-dot"></i> Maps
             </button>
           </div>
